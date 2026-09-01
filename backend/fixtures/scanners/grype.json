@@ -1,0 +1,87 @@
+{
+  "matches": [
+    {
+      "vulnerability": {
+        "id": "CVE-2021-3711",
+        "dataSource": "https://nvd.nist.gov/vuln/detail/CVE-2021-3711",
+        "namespace": "debian:distro:debian:11",
+        "severity": "Critical",
+        "description": "In order to decrypt SM2 encrypted data an application is expected to call the API function EVP_PKEY_decrypt().",
+        "fix": {
+          "versions": [
+            "1.1.1k-1+deb11u1"
+          ],
+          "state": "fixed"
+        },
+        "cvss": [
+          {
+            "version": "3.1",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "metrics": {
+              "baseScore": 9.8
+            }
+          }
+        ]
+      },
+      "artifact": {
+        "name": "openssl",
+        "version": "1.1.1k-1",
+        "type": "deb",
+        "locations": [
+          {
+            "path": "/usr/lib/x86_64-linux-gnu/libssl.so.1.1"
+          }
+        ],
+        "purl": "pkg:deb/debian/openssl@1.1.1k-1"
+      },
+      "relatedVulnerabilities": []
+    },
+    {
+      "vulnerability": {
+        "id": "GHSA-w596-4wvx-j9j6",
+        "namespace": "github:language:python",
+        "severity": "High",
+        "description": "Deserialization of untrusted data in py library",
+        "fix": {
+          "versions": [
+            "1.11.0"
+          ],
+          "state": "fixed"
+        },
+        "cvss": []
+      },
+      "artifact": {
+        "name": "py",
+        "version": "1.10.0",
+        "type": "python",
+        "locations": [
+          {
+            "path": "/usr/lib/python3/dist-packages/py"
+          }
+        ],
+        "purl": "pkg:pypi/py@1.10.0"
+      },
+      "relatedVulnerabilities": [
+        {
+          "id": "CVE-2022-42969",
+          "description": "The py library through 1.11.0 for Python allows remote attackers to conduct a ReDoS attack.",
+          "cvss": [
+            {
+              "version": "3.1",
+              "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+              "metrics": {
+                "baseScore": 7.5
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "source": {
+    "type": "image",
+    "target": {
+      "userInput": "python:3.9-slim"
+    }
+  }
+}

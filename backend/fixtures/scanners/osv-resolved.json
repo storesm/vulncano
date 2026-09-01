@@ -1,0 +1,145 @@
+{
+  "results": [
+    {
+      "coordinates": [
+        "jinja2@2.11.2"
+      ],
+      "entry": {
+        "id": "GHSA-462w-v97r-4m45",
+        "aliases": [
+          "CVE-2020-28493"
+        ],
+        "summary": "Regular Expression Denial of Service in Jinja2",
+        "details": "The ReDoS vulnerability is mainly due to the sub-pattern [a-zA-Z0-9._-]+.[a-zA-Z0-9._-]+ in the urlize filter.",
+        "published": "2021-02-01T18:14:12Z",
+        "modified": "2023-11-08T04:04:16.343751Z",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+          }
+        ],
+        "database_specific": {
+          "severity": "MODERATE"
+        },
+        "affected": [
+          {
+            "package": {
+              "name": "jinja2",
+              "ecosystem": "PyPI"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "2.11.3"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "type": "ADVISORY",
+            "url": "https://nvd.nist.gov/vuln/detail/CVE-2020-28493"
+          }
+        ]
+      }
+    },
+    {
+      "coordinates": [
+        "pyyaml@5.3.1"
+      ],
+      "entry": {
+        "id": "GHSA-8q59-q68h-6hv4",
+        "aliases": [
+          "CVE-2020-14343"
+        ],
+        "summary": "Improper Input Validation in PyYAML",
+        "details": "A vulnerability was discovered in the PyYAML library, where it is susceptible to arbitrary code execution when it processes untrusted YAML files through the full_load method.",
+        "published": "2021-02-09T21:59:36Z",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+          }
+        ],
+        "database_specific": {
+          "severity": "CRITICAL"
+        },
+        "affected": [
+          {
+            "package": {
+              "name": "pyyaml",
+              "ecosystem": "PyPI"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "0"
+                  },
+                  {
+                    "fixed": "5.4"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": [
+          {
+            "type": "WEB",
+            "url": "https://github.com/yaml/pyyaml/issues/420"
+          }
+        ]
+      }
+    },
+    {
+      "coordinates": [
+        "flask@2.0.1",
+        "flask@2.0.1"
+      ],
+      "entry": {
+        "id": "CVE-2023-30861",
+        "summary": "Flask vulnerable to possible disclosure of permanent session cookie",
+        "details": "When all of the following conditions are met, a response containing data intended for one client may be cached and subsequently sent by the proxy to other clients.",
+        "published": "2023-05-02T18:15:00Z",
+        "severity": [
+          {
+            "type": "CVSS_V3",
+            "score": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:N/A:N"
+          }
+        ],
+        "affected": [
+          {
+            "package": {
+              "name": "flask",
+              "ecosystem": "PyPI"
+            },
+            "ranges": [
+              {
+                "type": "ECOSYSTEM",
+                "events": [
+                  {
+                    "introduced": "2.0.0"
+                  },
+                  {
+                    "fixed": "2.2.5"
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "references": []
+      }
+    }
+  ]
+}

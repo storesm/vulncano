@@ -1,0 +1,13 @@
+{
+  "name": "sample-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": "4.17.15",
+    "express": "^4.17.1",
+    "minimist": "0.0.8",
+    "legacy-helper": "github:example/legacy-helper#v2"
+  },
+  "devDependencies": {
+    "jest": "^26.0.0"
+  }
+}

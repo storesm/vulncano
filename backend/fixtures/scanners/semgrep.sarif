@@ -1,0 +1,93 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://json.schemastore.org/sarif-2.1.0.json",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "name": "semgrep",
+          "version": "1.45.0",
+          "rules": [
+            {
+              "id": "python.lang.security.audit.exec-detected",
+              "shortDescription": {
+                "text": "Detected the use of exec"
+              },
+              "fullDescription": {
+                "text": "Detected the use of exec. exec executes arbitrary Python code."
+              },
+              "defaultConfiguration": {
+                "level": "warning"
+              },
+              "properties": {
+                "tags": [
+                  "CWE-95",
+                  "security"
+                ]
+              }
+            },
+            {
+              "id": "python.flask.security.injection.raw-html-format",
+              "shortDescription": {
+                "text": "Unescaped variable in HTML"
+              },
+              "fullDescription": {
+                "text": "Found a template created with raw string formatting, which can lead to XSS."
+              },
+              "defaultConfiguration": {
+                "level": "error"
+              },
+              "properties": {
+                "tags": [
+                  "CWE-79",
+                  "owasp-a07"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "results": [
+        {
+          "ruleId": "python.lang.security.audit.exec-detected",
+          "level": "warning",
+          "message": {
+            "text": "Detected the use of exec in app/tasks.py"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/tasks.py"
+                },
+                "region": {
+                  "startLine": 42,
+                  "startColumn": 5
+                }
+              }
+            }
+          ]
+        },
+        {
+          "ruleId": "python.flask.security.injection.raw-html-format",
+          "level": "error",
+          "message": {
+            "text": "Unescaped variable rendered into HTML"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "app/views.py"
+                },
+                "region": {
+                  "startLine": 118
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

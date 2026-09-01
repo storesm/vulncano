@@ -1,0 +1,4 @@
+CVE,PACKAGE,VERSION,PURL,CWE,DESCRIPTION,BASE_SCORE,CVSS_VECTOR,REMEDIATION
+CVE-2021-44228,log4j-core,2.14.1,pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1,CWE-502,Remote code execution through JNDI lookup in Log4j2,10.0,CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H,Upgrade to 2.17.1
+CVE-2022-22965,spring-beans,5.3.15,pkg:maven/org.springframework/spring-beans@5.3.15,CWE-94,Spring4Shell remote code execution through data binding,9.8,CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H,Upgrade to 5.3.18
+CVE-2020-28493,Jinja2,2.11.2,pkg:pypi/jinja2@2.11.2,CWE-400,Regular expression denial of service in the urlize filter,5.3,CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L,Upgrade to 2.11.3

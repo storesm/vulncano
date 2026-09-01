@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Vulncano">
+  <defs>
+    <linearGradient id="rock" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#465064"/>
+      <stop offset="1" stop-color="#1b2130"/>
+    </linearGradient>
+    <linearGradient id="lava" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="0.4" stop-color="#ff8f1f"/>
+      <stop offset="1" stop-color="#e03616"/>
+    </linearGradient>
+  </defs>
+
+  <path d="M2 56 L23.2 19.4 C24.4 17.3 25.7 16.4 27.6 16.4 L36.4 16.4 C38.3 16.4 39.6 17.3 40.8 19.4 L62 56 Z"
+        fill="url(#rock)"/>
+  <path d="M2 56 L23.2 19.4 C24.4 17.3 25.7 16.4 27.6 16.4 L31 16.4 L31 56 Z"
+        fill="#ffffff" opacity="0.06"/>
+
+  <path d="M21.5 27.5 L32 48.5 L42.5 27.5" fill="none" stroke="url(#lava)" stroke-width="5.6"
+        stroke-linecap="round" stroke-linejoin="round"/>
+
+  <path d="M25.4 17.2 C27.4 20.2 36.6 20.2 38.6 17.2 L36.4 16.4 L27.6 16.4 Z" fill="#0e1219"/>
+  <path d="M27.2 18.6 C28.8 20 35.2 20 36.8 18.6" fill="none" stroke="url(#lava)" stroke-width="2.4"
+        stroke-linecap="round"/>
+
+  <circle cx="32" cy="8.2" r="2.7" fill="#ff8f1f"/>
+  <circle cx="23.8" cy="11" r="1.8" fill="#ffb347"/>
+  <circle cx="40.6" cy="10.2" r="2" fill="#e03616"/>
+  <circle cx="45.8" cy="5.2" r="1.2" fill="#ffd166" opacity="0.85"/>
+  <circle cx="18.8" cy="5.6" r="1" fill="#ffd166" opacity="0.6"/>
+</svg>

@@ -1,0 +1,86 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.5",
+  "version": 1,
+  "metadata": {
+    "tools": [
+      {
+        "vendor": "anchore",
+        "name": "syft"
+      }
+    ]
+  },
+  "components": [
+    {
+      "bom-ref": "pkg:npm/lodash@4.17.15",
+      "type": "library",
+      "name": "lodash",
+      "version": "4.17.15",
+      "purl": "pkg:npm/lodash@4.17.15"
+    },
+    {
+      "bom-ref": "pkg:npm/minimist@0.0.8",
+      "type": "library",
+      "name": "minimist",
+      "version": "0.0.8",
+      "purl": "pkg:npm/minimist@0.0.8"
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "bom-ref": "CVE-2020-8203",
+      "id": "CVE-2020-8203",
+      "source": {
+        "name": "NVD",
+        "url": "https://nvd.nist.gov"
+      },
+      "description": "Prototype pollution attack when using _.zipObjectDeep in lodash before 4.17.20.",
+      "detail": "Prototype pollution allows an attacker to modify Object.prototype.",
+      "published": "2020-07-15T17:15:00Z",
+      "ratings": [
+        {
+          "source": {
+            "name": "NVD"
+          },
+          "score": 7.4,
+          "severity": "high",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:H"
+        }
+      ],
+      "advisories": [
+        {
+          "url": "https://github.com/advisories/GHSA-p6mc-m468-83gg"
+        }
+      ],
+      "recommendation": "Upgrade to 4.17.20",
+      "affects": [
+        {
+          "ref": "pkg:npm/lodash@4.17.15"
+        }
+      ]
+    },
+    {
+      "bom-ref": "CVE-2020-7598",
+      "id": "CVE-2020-7598",
+      "source": {
+        "name": "NVD"
+      },
+      "description": "minimist before 1.2.2 could be tricked into adding or modifying properties of Object.prototype.",
+      "published": "2020-03-11T19:15:00Z",
+      "ratings": [
+        {
+          "score": 5.6,
+          "severity": "medium",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:npm/minimist@0.0.8"
+        }
+      ]
+    }
+  ]
+}

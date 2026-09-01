@@ -1,0 +1,95 @@
+{
+  "files": [
+    {
+      "file": "requirements.txt",
+      "id": "dependency",
+      "status": "pending",
+      "dependencies": [
+        {
+          "component": "jinja2",
+          "purl": "pkg:pypi/jinja2",
+          "version": "2.11.2",
+          "licenses": [
+            {
+              "name": "BSD-3-Clause"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "id": "CVE-2020-28493",
+              "CVE": "CVE-2020-28493",
+              "severity": "MEDIUM",
+              "published": "2021-02-01T18:15:00Z",
+              "source": "NVD",
+              "summary": "ReDoS in the urlize filter",
+              "description": "Jinja2 is vulnerable to a regular expression denial of service in the urlize filter.",
+              "ratings": [
+                {
+                  "score": 5.3,
+                  "severity": "MEDIUM",
+                  "method": "CVSSv3",
+                  "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+                }
+              ],
+              "fixed": "2.11.3"
+            }
+          ]
+        },
+        {
+          "component": "pyyaml",
+          "purl": "pkg:pypi/pyyaml",
+          "version": "5.3.1",
+          "licenses": [
+            {
+              "name": "MIT"
+            }
+          ],
+          "vulnerabilities": [
+            {
+              "id": "CVE-2020-14343",
+              "CVE": "CVE-2020-14343",
+              "severity": "CRITICAL",
+              "published": "2021-02-09T21:15:00Z",
+              "source": "NVD",
+              "summary": "Arbitrary code execution through full_load",
+              "description": "PyYAML is susceptible to arbitrary code execution when processing untrusted YAML files.",
+              "ratings": [
+                {
+                  "score": 9.8,
+                  "severity": "CRITICAL",
+                  "method": "CVSSv3",
+                  "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H"
+                }
+              ],
+              "fixed": "5.4"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "vulnerabilities": [
+    {
+      "id": "CVE-2021-44228",
+      "CVE": "CVE-2021-44228",
+      "severity": "CRITICAL",
+      "published": "2021-12-10T10:15:00Z",
+      "summary": "Log4Shell",
+      "description": "Apache Log4j2 JNDI features do not protect against attacker controlled LDAP endpoints.",
+      "ratings": [
+        {
+          "score": 10.0,
+          "severity": "CRITICAL",
+          "method": "CVSSv3",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"
+        }
+      ],
+      "affects": [
+        {
+          "ref": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1"
+        }
+      ],
+      "recommendation": "2.17.1"
+    }
+  ]
+}

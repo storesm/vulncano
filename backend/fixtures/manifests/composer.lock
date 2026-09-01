@@ -1,0 +1,18 @@
+{
+  "packages": [
+    {
+      "name": "monolog/monolog",
+      "version": "1.25.3"
+    },
+    {
+      "name": "symfony/http-kernel",
+      "version": "v4.4.12"
+    }
+  ],
+  "packages-dev": [
+    {
+      "name": "phpunit/phpunit",
+      "version": "8.5.8"
+    }
+  ]
+}

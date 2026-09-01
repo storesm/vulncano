@@ -1,0 +1,7 @@
+[project]
+name = "sample"
+version = "0.1.0"
+dependencies = ["Flask==2.0.1", "requests==2.25.1"]
+
+[project.optional-dependencies]
+dev = ["pytest==7.4.0"]

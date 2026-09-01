@@ -1,0 +1,8 @@
+# runtime deps for the sample service
+Flask==2.0.1
+Jinja2==2.11.2
+requests==2.25.1
+PyYAML==5.3.1
+urllib3>=1.26.4
+cryptography  # unpinned on purpose, shows up as a warning
+-e .

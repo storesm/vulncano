@@ -1,0 +1,11 @@
+[[package]]
+name = "flask"
+version = "2.0.1"
+description = "A simple framework"
+optional = false
+
+[[package]]
+name = "jinja2"
+version = "2.11.2"
+description = "A templating engine"
+optional = false

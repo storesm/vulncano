@@ -1,0 +1,47 @@
+services:
+  db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-vulncano}
+      MARIADB_DATABASE: ${MYSQL_DATABASE:-vulncano}
+      MARIADB_USER: ${MYSQL_USER:-vulncano}
+      MARIADB_PASSWORD: ${MYSQL_PASSWORD:-vulncano}
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      retries: 20
+
+  backend:
+    build: ./backend
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      VULNCANO_DATABASE_URL: ${VULNCANO_DATABASE_URL:-mysql+pymysql://vulncano:vulncano@db:3306/vulncano}
+      VULNCANO_DATA_DIR: /data
+      VULNCANO_SECRET_KEY: ${VULNCANO_SECRET_KEY:-}
+      VULNCANO_AUTH_ENABLED: ${VULNCANO_AUTH_ENABLED:-false}
+      VULNCANO_AUTH_USER: ${VULNCANO_AUTH_USER:-admin}
+      VULNCANO_AUTH_PASSWORD: ${VULNCANO_AUTH_PASSWORD:-}
+      VULNCANO_NVD_API_KEY: ${VULNCANO_NVD_API_KEY:-}
+      VULNCANO_CORS_ORIGINS: ${VULNCANO_CORS_ORIGINS:-http://localhost:8080}
+    volumes:
+      - app-data:/data
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
+volumes:
+  db-data:
+  app-data:

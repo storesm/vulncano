@@ -1,0 +1,77 @@
+{
+  "reportSchema": "1.1",
+  "scanInfo": {
+    "engineVersion": "8.4.0"
+  },
+  "projectInfo": {
+    "name": "sample",
+    "reportDate": "2024-03-11T10:00:00.000Z"
+  },
+  "dependencies": [
+    {
+      "fileName": "jackson-databind-2.9.10.4.jar",
+      "filePath": "/app/lib/jackson-databind-2.9.10.4.jar",
+      "packages": [
+        {
+          "id": "pkg:maven/com.fasterxml.jackson.core/jackson-databind@2.9.10.4"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "source": "NVD",
+          "name": "CVE-2020-25649",
+          "severity": "HIGH",
+          "cvssv3": {
+            "baseScore": 7.5,
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "UNCHANGED",
+            "confidentialityImpact": "NONE",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "NONE",
+            "baseSeverity": "HIGH"
+          },
+          "cwes": [
+            "CWE-611"
+          ],
+          "description": "A flaw was found in FasterXML Jackson Databind, where it did not have entity expansion secured properly."
+        }
+      ]
+    },
+    {
+      "fileName": "log4j-core-2.14.1.jar",
+      "filePath": "/app/lib/log4j-core-2.14.1.jar",
+      "packages": [
+        {
+          "id": "pkg:maven/org.apache.logging.log4j/log4j-core@2.14.1"
+        }
+      ],
+      "vulnerabilities": [
+        {
+          "source": "NVD",
+          "name": "CVE-2021-44228",
+          "severity": "CRITICAL",
+          "cvssv3": {
+            "baseScore": 10.0,
+            "attackVector": "NETWORK",
+            "attackComplexity": "LOW",
+            "privilegesRequired": "NONE",
+            "userInteraction": "NONE",
+            "scope": "CHANGED",
+            "confidentialityImpact": "HIGH",
+            "integrityImpact": "HIGH",
+            "availabilityImpact": "HIGH",
+            "baseSeverity": "CRITICAL"
+          },
+          "cwes": [
+            "CWE-502",
+            "CWE-400"
+          ],
+          "description": "Apache Log4j2 JNDI features used in configuration do not protect against attacker controlled LDAP endpoints."
+        }
+      ]
+    }
+  ]
+}
